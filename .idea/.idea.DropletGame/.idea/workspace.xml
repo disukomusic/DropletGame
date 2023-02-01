@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3524ac17-14e1-405a-b61d-b7b98651da12" name="Changes" comment="" />
+    <list default="true" id="3524ac17-14e1-405a-b61d-b7b98651da12" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DropletGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DropletGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Droplet.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Droplet.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player Animate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player Animate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/RollPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/RollPlayer.cs.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,14 +27,15 @@
     "Discover.Launch.Via.Unity": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ToolWindowDebug.ShowToolbar": "false",
     "WebServerToolWindowFactoryState": "false",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Stephanie.Rios\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Stephanie.Rios\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Stephanie.Rios\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Angelo.Licavoli\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Angelo.Licavoli\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Angelo.Licavoli\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -58,10 +66,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="30364">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="30364" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -78,6 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675212838985</updated>
       <workItem from="1675212841281" duration="141000" />
+      <workItem from="1675223053467" duration="584000" />
     </task>
     <servers />
   </component>
