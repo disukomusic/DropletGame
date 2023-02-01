@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class PlayerAnimate : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Transform _transform;
+
     void Start()
     {
-        
-    }
+        _transform = GetComponent<Transform>();
+        StartCoroutine(RunAnim());
+    }   
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator RunAnim()
     {
-        
+        while (true)
+        {
+            yield return new WaitForSeconds(0.1f);
+            _transform.localScale = new Vector3(_transform.localScale.x, _transform.localScale.y, _transform.localScale.z);
+            yield return new WaitForSeconds(0.1f);
+            _transform.localScale = new Vector3(-_transform.localScale.x, _transform.localScale.y, _transform.localScale.z);
+        }
+
     }
 }

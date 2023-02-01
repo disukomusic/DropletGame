@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     
     public float movementSpeed;
     public float jumpForce;
+    public bool grounded;
     
     void Start()
     {
@@ -15,23 +17,23 @@ public class PlayerMove : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
     
-    void Update()
+    void FixedUpdate()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 direction = new Vector3(x: horizontal, y:0, z: -vertical);
-        _rigidbody.AddForce(direction * movementSpeed);
+        _rigidbody.velocity = new Vector3(- Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime, _rigidbody.velocity.y, -Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime);
 
-        if(Input.GetButtonDown("Jump"))
+    }
+
+    void Update()
+    {
+        if(Input.GetButtonDown("Jump") && grounded)
         {
-            Debug.Log("jump!");
             _rigidbody.velocity = new Vector3(0,jumpForce,0);
         }
-        else if(Input.GetKeyDown(KeyCode.Space))
+        else if(Input.GetKeyDown(KeyCode.Space) && grounded)
         {
-            Debug.Log("jump!");
-
             _rigidbody.velocity = new Vector3(0,jumpForce,0);
         }
     }
