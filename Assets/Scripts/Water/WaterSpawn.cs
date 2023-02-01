@@ -10,36 +10,37 @@ public class WaterSpawn : MonoBehaviour
     public GameObject dropletPrefab; 
     private int _lastRand = 0;
     private GameObject _droplet;
-
-    void Start()
-    {
-        
-    }
-
+    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.F))
         {   
             SpawnWater();
         }
     }
-    public void SpawnWater()
+    void SpawnWater()
     {
+        //get a random index from the waypoints list
         int rand = GetRandom();
+        //generate indexes until a new one is returned
         while (rand == _lastRand) 
         {
             rand = GetRandom();
         }
+        //store the index of the current waypoint as the last selected one
         _lastRand = rand;
-            
+        
+        //set the current waypoint to the random index and then set the position of it
         GameObject currentWaypoint = waypoints[rand];
         Vector3 waypointPos = currentWaypoint.transform.position;
-        if (_droplet != null)
+        
+        //if a droplet is already present in the scene, destroy it
+        if (_droplet)
         {
             Destroy(_droplet);
         }
+        //instantiate a droplet at the position of the waypoint (and rotate so its upright, stupid blender)
         _droplet = Instantiate(dropletPrefab, waypointPos, Quaternion.Euler(-90, 0, 0));
-        //_droplet.transform.Rotate(-90, 0, 0, Space.Self);
     }
 
     int GetRandom()

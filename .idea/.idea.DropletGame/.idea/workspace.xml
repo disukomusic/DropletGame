@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3524ac17-14e1-405a-b61d-b7b98651da12" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DropletGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DropletGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WaterDroplet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WaterDroplet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Droplet.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Droplet.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Water/WaterAnimate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Water/WaterAnimate.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Water/WaterSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Water/WaterSpawn.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +91,7 @@
       <updated>1675212838985</updated>
       <workItem from="1675212841281" duration="141000" />
       <workItem from="1675223053467" duration="584000" />
-      <workItem from="1675232839303" duration="11820000" />
+      <workItem from="1675232839303" duration="12601000" />
     </task>
     <servers />
   </component>
