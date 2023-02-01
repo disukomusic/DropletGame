@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 public class Timer : MonoBehaviour
 {
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
-    public Text timeText;
+    public TMP_Text timeText;
     private void Start()
     {
         // Starts the timer automatically
