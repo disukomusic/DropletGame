@@ -21,6 +21,9 @@ public class PlayerCollect : MonoBehaviour
         if (other.CompareTag("Droplet") )
         {
             hasDroplet = true;
+
+            WaterDestroy droplet = other.GetComponent<WaterDestroy>();
+            droplet.Collect();
         }
         else
         if (other.CompareTag("Deposit") && hasDroplet)
