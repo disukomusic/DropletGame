@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18339334, g: 0.2289953, b: 0.30606088, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -565,14 +565,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647220154}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: -0.031609967, y: -0.8723656, z: 0.345473, w: 0.34442356}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 35.52, y: -130.08, z: 21.109}
 --- !u!1 &688216110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,6 +1137,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f77c0f22277a74d43933ad46444588d4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 47403a068fa779a4db6d193a19275b40, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f77c0f22277a74d43933ad46444588d4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a7c85df5be6f07d4b94e9a2767a73ba6, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f77c0f22277a74d43933ad46444588d4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3789a78b1a47d5b4bb8ddfa70d016343, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f77c0f22277a74d43933ad46444588d4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: feff02abfa31e6044853ce9f841e693a, type: 2}
     - target: {fileID: 919132149155446097, guid: f77c0f22277a74d43933ad46444588d4,
         type: 3}
       propertyPath: m_Name
