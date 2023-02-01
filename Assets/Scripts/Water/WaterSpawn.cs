@@ -41,6 +41,7 @@ public class WaterSpawn : MonoBehaviour
         }
         //instantiate a droplet at the position of the waypoint (and rotate so its upright, stupid blender)
         _droplet = Instantiate(dropletPrefab, waypointPos, Quaternion.Euler(-90, 0, 0));
+        _droplet.tag = "Droplet";
     }
 
     int GetRandom()

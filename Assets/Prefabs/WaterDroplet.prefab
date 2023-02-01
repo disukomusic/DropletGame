@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 8760475490912001540}
   - component: {fileID: 6807051485101402830}
   - component: {fileID: 4983251494001664096}
+  - component: {fileID: 4601380824775566809}
+  - component: {fileID: 8760665356140821767}
   m_Layer: 0
   m_Name: WaterDroplet
-  m_TagString: Untagged
+  m_TagString: Droplet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,3 +101,28 @@ MonoBehaviour:
   degreesPerSecond: 15
   amplitude: 0.5
   frequency: 1
+--- !u!135 &4601380824775566809
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005607167230479131}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.033556808
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8760665356140821767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005607167230479131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92616e0ecaebfcb4e90e17d08de2bb23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
