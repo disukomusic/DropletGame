@@ -17,6 +17,7 @@ public class PlayerCollect : MonoBehaviour
     {
         hasDroplet = false;
         score = 0;
+        scoreText.text = score.ToString();
     }
 
     public void OnTriggerEnter(Collider other)
@@ -24,7 +25,6 @@ public class PlayerCollect : MonoBehaviour
         if (other.CompareTag("Droplet") )
         {
             hasDroplet = true;
-
             WaterDestroy droplet = other.GetComponent<WaterDestroy>();
             droplet.Collect();
         }
@@ -34,8 +34,8 @@ public class PlayerCollect : MonoBehaviour
             GameManager.WaterSpawner.SpawnWater();
             hasDroplet = false;
             score += 1;
+            scoreText.text = score.ToString();
             Debug.Log(score);
         }
-
     }
 }

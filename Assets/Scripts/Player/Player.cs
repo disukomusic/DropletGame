@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
         _playerCollect.score = 0;
     }
 
+    
     void Update()
     {
         score = GetComponent<PlayerCollect>().score;

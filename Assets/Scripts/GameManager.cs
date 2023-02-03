@@ -2,42 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using TMPro;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
-    private GameState _gameState;
+    
 
-    public Player Player;
+    public GameObject Player;
     public WaterSpawn WaterSpawner;
     public UIManager UIManager;
     public Timer Timer;
+    public TMP_Text endScoreText;
+    
+    private int _score;
+    private GameState _gameState;
+    private Player _player;
+    
 
-    private int score;
-    public TextMeshProUGUI scoreText;
 
     void Start()    
     {
         _gameState = GameState.StartScreen;
+        Player _player = Player.GetComponent<Player>();
     }
 
     public void GameStart()
     {
         _gameState = GameState.Gameplay;
         Timer.StartTimer();
-        Debug.Log("game start");
         WaterSpawner.SpawnWater();
-        Player.ResetPlayerPosition();
-        Player.ResetScore();
+        _player.ResetPlayerPosition();
+        _player.ResetScore();
+        _player.GetComponent<PlayerCollect>().scoreText.text = 0.ToString();
+        Debug.Log("game start");
     }
 
     public void GameEnd()
     {
+        endScoreText.text = ("Your score was:" + Player.GetComponent<Player>().score.ToString());
         _gameState = GameState.GameOver;
         Timer.StopTimer();
-        Debug.Log("game end");
-        Debug.Log("Your score was " + Player.score);
-        _gameState = GameState.GameOver;
+        Debug.Log("game end"); 
     }
     
     public GameState GetGameState()
