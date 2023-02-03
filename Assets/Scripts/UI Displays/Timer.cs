@@ -11,8 +11,7 @@ public class Timer : MonoBehaviour
     public TMP_Text timeText;
     private void Start()
     {
-        // Starts the timer automatically
-        timerIsRunning = true;
+        timerIsRunning = false;
     }
     void Update()
     {
@@ -37,5 +36,10 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeToDisplay / 60); 
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void StartTimer()
+    {
+        timerIsRunning = true;
     }
 }

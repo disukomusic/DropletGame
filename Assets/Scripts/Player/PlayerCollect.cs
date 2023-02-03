@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerCollect : MonoBehaviour
 {
+    public GameManager GameManager;
     public bool hasDroplet;
     public int score;
 
@@ -28,6 +29,7 @@ public class PlayerCollect : MonoBehaviour
         else
         if (other.CompareTag("Deposit") && hasDroplet)
         {
+            GameManager.WaterSpawner.SpawnWater();
             hasDroplet = false;
             score += 1;
             Debug.Log(score);

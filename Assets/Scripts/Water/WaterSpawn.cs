@@ -18,7 +18,7 @@ public class WaterSpawn : MonoBehaviour
             SpawnWater();
         }
     }
-    void SpawnWater()
+    public void SpawnWater()
     {
         //get a random index from the waypoints list
         int rand = GetRandom();
