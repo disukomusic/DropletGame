@@ -18,19 +18,17 @@ public class GameManager : MonoBehaviour
     private GameState _gameState;
     private Player _player;
     
-
-
     void Start()    
     {
         _gameState = GameState.StartScreen;
-        Player _player = Player.GetComponent<Player>();
+        _player = Player.GetComponent<Player>();
     }
 
     public void GameStart()
     {
         _gameState = GameState.Gameplay;
         Timer.StartTimer();
-        WaterSpawner.SpawnWater();
+        WaterSpawner.SpawnWater();  
         _player.ResetPlayerPosition();
         _player.ResetScore();
         _player.GetComponent<PlayerCollect>().scoreText.text = 0.ToString();

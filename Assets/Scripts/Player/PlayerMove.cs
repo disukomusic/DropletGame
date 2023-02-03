@@ -23,7 +23,7 @@ public class PlayerMove : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        if(_player.GameManager.GetGameState() == GameState.Gameplay)
+        if(_player.gameManager.GetGameState() == GameState.Gameplay)
         {
             _rigidbody.velocity = new Vector3(- Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime, _rigidbody.velocity.y, -Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime);
         }
@@ -31,7 +31,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if(_player.GameManager.GetGameState() == GameState.Gameplay)
+        if(_player.gameManager.GetGameState() == GameState.Gameplay)
         {
             if(Input.GetButtonDown("Jump") && grounded)
             {

@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     private PlayerCollect _playerCollect;
     
     public float score;
-    public GameManager GameManager;
+    public GameManager gameManager;
     void Start()
     {
         _transform = GetComponent<Transform>();
