@@ -18,7 +18,6 @@ public class PlayerCollect : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
         if (other.CompareTag("Droplet") )
         {
             hasDroplet = true;

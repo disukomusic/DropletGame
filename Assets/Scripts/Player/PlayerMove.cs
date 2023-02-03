@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     private Rigidbody _rigidbody;
+    private Player _player;
     
     public float movementSpeed;
     public float jumpForce;
@@ -13,7 +14,7 @@ public class PlayerMove : MonoBehaviour
     
     void Start()
     {
-        
+        _player = GetComponent<Player>();
         _rigidbody = GetComponent<Rigidbody>();
     }
     
@@ -22,19 +23,25 @@ public class PlayerMove : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        _rigidbody.velocity = new Vector3(- Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime, _rigidbody.velocity.y, -Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime);
-
+        if(_player.GameManager.GetGameState() == GameState.Gameplay)
+        {
+            _rigidbody.velocity = new Vector3(- Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime, _rigidbody.velocity.y, -Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime);
+        }
     }
 
     void Update()
     {
-        if(Input.GetButtonDown("Jump") && grounded)
+        if(_player.GameManager.GetGameState() == GameState.Gameplay)
         {
-            _rigidbody.velocity = new Vector3(0,jumpForce,0);
-        }
-        else if(Input.GetKeyDown(KeyCode.Space) && grounded)
-        {
-            _rigidbody.velocity = new Vector3(0,jumpForce,0);
-        }
+            if(Input.GetButtonDown("Jump") && grounded)
+            {
+                _rigidbody.velocity = new Vector3(0,jumpForce,0);
+            }
+            else if(Input.GetKeyDown(KeyCode.Space) && grounded)
+            {
+                _rigidbody.velocity = new Vector3(0,jumpForce,0);
+            }
+        } 
+
     }
 }

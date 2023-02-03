@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private GameState gameState;
+    private GameState _gameState;
 
     public Player Player;
     public WaterSpawn WaterSpawner;
@@ -15,25 +15,30 @@ public class GameManager : MonoBehaviour
 
     void Start()    
     {
-        gameState = GameState.StartScreen;
+        _gameState = GameState.StartScreen;
     }
 
     public void GameStart()
     {
-        gameState = GameState.Gameplay;
+        _gameState = GameState.Gameplay;
         Timer.StartTimer();
         Debug.Log("game start");
         WaterSpawner.SpawnWater();
         Player.ResetPlayerPosition();
+        Player.ResetScore();
     }
-    
-    public void TimerEnd()
+
+    public void GameEnd()
     {
-        
+        _gameState = GameState.GameOver;
+        Timer.StopTimer();
+        Debug.Log("game end");
+        Debug.Log("Your score was " + Player.score);
+        _gameState = GameState.GameOver;
     }
     
     public GameState GetGameState()
     {
-        return gameState;
+        return _gameState;
     }
 }
