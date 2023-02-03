@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
+
 
 public class PlayerCollect : MonoBehaviour
 {
     public GameManager GameManager;
     public bool hasDroplet;
     public int score;
+    public TMP_Text scoreText;
 
     void Start()
     {

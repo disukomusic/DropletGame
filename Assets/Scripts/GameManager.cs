@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class GameManager : MonoBehaviour
     public UIManager UIManager;
     public Timer Timer;
 
+    private int score;
+    public TextMeshProUGUI scoreText;
 
     void Start()    
     {
