@@ -41,7 +41,7 @@ public class PlayerMove : MonoBehaviour
             {
                 _rigidbody.velocity = new Vector3(0,jumpForce,0);
             }
-        } 
+        }
 
     }
 }
