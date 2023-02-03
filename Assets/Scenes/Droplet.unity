@@ -243,7 +243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &96182251
 RectTransform:
   m_ObjectHideFlags: 0
@@ -511,7 +511,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1608731398}
-  PlayerCollect: {fileID: 0}
   WaterSpawner: {fileID: 290613824}
   UIManager: {fileID: 304787466}
   Timer: {fileID: 291895569}
@@ -2121,6 +2120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8675cede6d4ac741b2a4981ae818fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   GameManager: {fileID: 262618119}
 --- !u!1001 &1676393144
 PrefabInstance:
