@@ -6,6 +6,7 @@ using UnityEngine;
 public class DepositParticles : MonoBehaviour
 {
     public GameObject player;
+    
     private PlayerCollect _playerCollect;
     private ParticleSystem _particleSystem;
 
