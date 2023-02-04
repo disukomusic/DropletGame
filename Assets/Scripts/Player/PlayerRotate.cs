@@ -16,13 +16,15 @@ public class PlayerRotate : MonoBehaviour
 
     void Update()
     {
-        float moveHorizontal = Input.GetAxisRaw ("Horizontal");
-        float moveVertical = Input.GetAxisRaw ("Vertical");
-        Vector3 movement = new Vector3(-moveHorizontal, 0.0f, -moveVertical);
-        if (movement != Vector3.zero)
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        Vector3 movement = new Vector3(-horizontalInput, 0, -verticalInput).normalized;
+        if (movement == Vector3.zero)
         {
-            _transform.rotation = Quaternion.LookRotation(movement);
+            return;
         }
-
+        Quaternion targetRotation = Quaternion.LookRotation(movement);
+        targetRotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 360 * Time.deltaTime);
+        _transform.rotation = targetRotation;
     }
 }
