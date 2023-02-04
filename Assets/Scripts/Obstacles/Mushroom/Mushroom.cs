@@ -32,12 +32,15 @@ public class Mushroom : Obstacle
     private void Awake()
     {
         StartCoroutine(MushroomTimer());
-    }
+    }       
 
     IEnumerator MushroomTimer()
     {
         yield return new WaitForSeconds(10);
-        _player.movementSpeed = 700;
+        if (_player) 
+        {
+            _player.movementSpeed = 700f;
+        }
         Destroy(gameObject);
     }
 }

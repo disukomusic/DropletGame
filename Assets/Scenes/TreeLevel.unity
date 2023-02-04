@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameManager: {fileID: 262618119}
-  timerTime: 60
+  timerTime: 90
   timerIsRunning: 0
   timeText: {fileID: 2118993924}
   _timeRemaining: 10
@@ -12155,6 +12155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91ced903ecd5064692a8a2e5fcd591b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particleSystem: {fileID: 816048459}
 --- !u!1001 &1676393144
 PrefabInstance:
   m_ObjectHideFlags: 0
