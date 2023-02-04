@@ -7529,6 +7529,7 @@ MonoBehaviour:
     hasPowerup: 0
   powerUps:
   - {fileID: 4252549498422108939, guid: be3a3c95e8ce74145bbd7ac6dbfe125d, type: 3}
+  - {fileID: 8662498537333929168, guid: 5a08f291cafd54c488b430fdc21d1cb6, type: 3}
   Player: {fileID: 1608731398}
 --- !u!1 &1818126526
 GameObject:
