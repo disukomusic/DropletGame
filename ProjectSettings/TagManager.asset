@@ -8,6 +8,7 @@ TagManager:
   - Deposit
   - Droplet
   - ClockPowerup
+  - Mushroom
   layers:
   - Default
   - TransparentFX

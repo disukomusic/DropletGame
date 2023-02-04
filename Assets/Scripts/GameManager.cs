@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     {
         _gameState = GameState.Gameplay;
         _player.GetComponent<PlayerCollect>().hasDroplet = false;
+        _player.GetComponent<PlayerMove>().movementSpeed = 700;
         Timer.StartTimer();
         WaterSpawner.SpawnWater();  
         _player.ResetPlayerPosition();
@@ -45,9 +46,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Started Powerup Timer");
         while (Timer._timeRemaining > 0)
         {
-            yield return new WaitForSeconds(Random.Range(15, 30));
-                PowerUpSpawner.SpawnPowerup();
-                infoText.NewPowerUp();
+            yield return new WaitForSeconds(Random.Range(10, 25));
+            PowerUpSpawner.SpawnPowerup();
+            infoText.NewPowerUp();
         }
     }
 
@@ -57,7 +58,7 @@ public class GameManager : MonoBehaviour
         while (Timer._timeRemaining > 0)
         {
             ObstacleSpawner.SpawnObstacle();
-            yield return new WaitForSeconds(Random.Range(20, 30));
+            yield return new WaitForSeconds(Random.Range(10, 25));
         }
     }
     

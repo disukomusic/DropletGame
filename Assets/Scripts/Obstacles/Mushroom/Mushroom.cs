@@ -12,7 +12,10 @@ public class Mushroom : Obstacle
         if (other.CompareTag("Player"))
         {
             Debug.Log("player entered mushroom zone");
-            other.GetComponent<PlayerMove>().movementSpeed = 200;
+            
+            _player = other.GetComponent<PlayerMove>();
+            _previousPlayerSpeed = _player.movementSpeed;
+            _player.movementSpeed = 200;
         } 
     }
     
@@ -21,7 +24,8 @@ public class Mushroom : Obstacle
         if (other.CompareTag("Player"))
         {
             Debug.Log("player exited mushroom zone");
-            other.GetComponent<PlayerMove>().movementSpeed = _previousPlayerSpeed;
+            Debug.Log(_previousPlayerSpeed);
+            other.GetComponent<PlayerMove>().movementSpeed = 700;
         } 
     }
 
@@ -32,7 +36,8 @@ public class Mushroom : Obstacle
 
     IEnumerator MushroomTimer()
     {
-        yield return new WaitForSeconds(10); 
+        yield return new WaitForSeconds(10);
+        _player.movementSpeed = 700;
         Destroy(gameObject);
     }
 }

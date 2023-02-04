@@ -24,7 +24,8 @@ public class SpeedUp : PowerUp
 
     IEnumerator SpeedUpTimer()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
+        Debug.Log(_playerMove);
         _playerMove.movementSpeed = 700;
     }
     
