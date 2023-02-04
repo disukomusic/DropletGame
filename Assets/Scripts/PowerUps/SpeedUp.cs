@@ -15,8 +15,9 @@ public class SpeedUp : PowerUp
             PowerUpSpawner.count -= 1;
             _playerMove = other.GetComponent<PlayerMove>();
             _playerMove.movementSpeed += 100;
-            Destroy(gameObject);
             StartCoroutine(SpeedUpTimer());
+            Destroy(gameObject);
+
 
         }
     }

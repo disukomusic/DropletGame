@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3524ac17-14e1-405a-b61d-b7b98651da12" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DropletGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DropletGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/mushroom.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/mushroom.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Droplet.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Droplet.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Obstacles/ObstacleSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacles/ObstacleSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUpSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUpSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PowerUps/Special Root.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PowerUps/Special Root.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/SpeedUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/SpeedUp.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +107,7 @@
       <workItem from="1675287614731" duration="1200000" />
       <workItem from="1675443728006" duration="14230000" />
       <workItem from="1675468453559" duration="12163000" />
-      <workItem from="1675531810106" duration="7944000" />
+      <workItem from="1675531810106" duration="8462000" />
     </task>
     <servers />
   </component>
