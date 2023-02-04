@@ -9,9 +9,11 @@ using TMPro;
 public class PlayerCollect : MonoBehaviour
 {
     public GameManager GameManager;
+    public PowerUpSpawner PowerUpSpawner;
     public bool hasDroplet;
     public int score;
     public TMP_Text scoreText;
+    
 
     void Start()
     {

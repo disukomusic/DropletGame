@@ -21,14 +21,10 @@ public class DepositParticles : MonoBehaviour
         if (_playerCollect.hasDroplet)
         {
            _particleSystem.enableEmission = true;
-
-            Debug.Log("playing trunk particles");
         }
         else
         {
             _particleSystem.enableEmission = false;
-            Debug.Log("stopping trunk particles");
-
         }
         
     }

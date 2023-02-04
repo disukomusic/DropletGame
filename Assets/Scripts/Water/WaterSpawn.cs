@@ -13,10 +13,10 @@ public class WaterSpawn : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {   
-            SpawnWater();
-        }
+        //if (Input.GetKeyDown(KeyCode.F))
+        //{   
+        //     SpawnWater();
+        //}
     }
     public void SpawnWater()
     {

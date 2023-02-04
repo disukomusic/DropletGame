@@ -7,10 +7,21 @@ using System;
 public class Timer : MonoBehaviour
 {
     public GameManager GameManager;
+    public static Timer instance; 
     public float timerTime;
-    private float _timeRemaining = 10;
     public bool timerIsRunning = false;
     public TMP_Text timeText;
+    
+    [HideInInspector] public float _timeRemaining = 10;
+
+    void Awake()
+    {
+        if (!instance)
+        {
+            instance = this;
+        }
+    }
+
     private void Start()
     {
         timerIsRunning = false;

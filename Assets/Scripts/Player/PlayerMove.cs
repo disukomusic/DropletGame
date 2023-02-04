@@ -8,7 +8,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody _rigidbody;
     private Player _player;
     
-    public float movementSpeed;
+    public float movementSpeed; 
     public float jumpForce;
     public bool grounded;
     

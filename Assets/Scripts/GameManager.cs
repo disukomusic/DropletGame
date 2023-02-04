@@ -11,9 +11,10 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public WaterSpawn WaterSpawner;
     public UIManager UIManager;
+    public PowerUpSpawner PowerUpSpawner;
     public Timer Timer;
     public TMP_Text endScoreText;
-    
+
     private int _score;
     private GameState _gameState;
     private Player _player;
@@ -33,13 +34,26 @@ public class GameManager : MonoBehaviour
         _player.ResetScore();
         _player.GetComponent<PlayerCollect>().scoreText.text = 0.ToString();
         Debug.Log("game start");
+        StartCoroutine(PowerUpTimer());
     }
+
+    IEnumerator PowerUpTimer()
+    {
+        Debug.Log("Started Powerup Timer");
+        while (Timer._timeRemaining > 0)
+        {
+            yield return new WaitForSeconds(Random.Range(15, 30));
+                PowerUpSpawner.SpawnPowerup();
+        }
+    }
+
 
     public void GameEnd()
     {
         endScoreText.text = ("Your score was:" + Player.GetComponent<Player>().score.ToString());
         _gameState = GameState.GameOver;
         Timer.StopTimer();
+        StopCoroutine(PowerUpTimer());
         Debug.Log("game end"); 
     }
     
