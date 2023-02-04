@@ -11,7 +11,7 @@ public class SpeedUp : PowerUp
     {
         if (other.CompareTag("Player"))
         {
-            _player
+            //_player
         }
     }
 }

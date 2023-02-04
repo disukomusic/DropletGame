@@ -14,8 +14,10 @@ public class PowerUpSpawner : MonoBehaviour
     private int _lastLastPosRand = 0;
     private int _lastPowerRand = 0;
     private GameObject _powerup;
+
     public void SpawnPowerup()
     {
+        
         Debug.Log(count);
 
         //get a random index for the waypoints list, as well as a random index for the powerups list

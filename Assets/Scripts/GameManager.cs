@@ -6,7 +6,6 @@ using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
-    
 
     public GameObject Player;
     public WaterSpawn WaterSpawner;
@@ -46,11 +45,10 @@ public class GameManager : MonoBehaviour
                 PowerUpSpawner.SpawnPowerup();
         }
     }
-
-
+    
     public void GameEnd()
     {
-        endScoreText.text = ("Your score was:" + Player.GetComponent<Player>().score.ToString());
+        endScoreText.text = ("Score:" + Player.GetComponent<Player>().score.ToString());
         _gameState = GameState.GameOver;
         Timer.StopTimer();
         StopCoroutine(PowerUpTimer());

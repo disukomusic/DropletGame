@@ -649,7 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameManager: {fileID: 262618119}
-  timerTime: 60
+  timerTime: 5
   timerIsRunning: 0
   timeText: {fileID: 2118993924}
   _timeRemaining: 10
@@ -6830,7 +6830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -59.63}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400311517
@@ -6959,7 +6959,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608731386}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -7051,7 +7051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameManager: {fileID: 262618119}
-  PowerUpSpawner: {fileID: 0}
+  PowerUpSpawner: {fileID: 1790907646}
   hasDroplet: 0
   score: 0
   scoreText: {fileID: 1327555043}
@@ -7281,7 +7281,7 @@ MonoBehaviour:
     hasPowerup: 0
   powerUps:
   - {fileID: 4252549498422108939, guid: be3a3c95e8ce74145bbd7ac6dbfe125d, type: 3}
-  Player: {fileID: 0}
+  Player: {fileID: 1608731398}
 --- !u!1 &1818126526
 GameObject:
   m_ObjectHideFlags: 0
@@ -7545,7 +7545,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.03606255, y: 0.018989451, z: 0.005010214}
-  m_Center: {x: 0.00886461, y: 6.788025e-11, z: 0.008}
+  m_Center: {x: 0.00886461, y: 6.788025e-11, z: 0.0078}
 --- !u!1 &1921585276
 GameObject:
   m_ObjectHideFlags: 0
