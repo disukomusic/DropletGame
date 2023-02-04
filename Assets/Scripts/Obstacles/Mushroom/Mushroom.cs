@@ -6,13 +6,13 @@ using UnityEngine;
 public class Mushroom : Obstacle
 {
     private float _previousPlayerSpeed;
+    private PlayerMove _player;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             Debug.Log("player entered mushroom zone");
-            _previousPlayerSpeed = other.GetComponent<PlayerMove>().movementSpeed;
-            other.GetComponent<PlayerMove>().movementSpeed = 300;
+            other.GetComponent<PlayerMove>().movementSpeed = 200;
         } 
     }
     
@@ -21,7 +21,7 @@ public class Mushroom : Obstacle
         if (other.CompareTag("Player"))
         {
             Debug.Log("player exited mushroom zone");
-            other.GetComponent<PlayerMove>().movementSpeed = 700;
+            other.GetComponent<PlayerMove>().movementSpeed = _previousPlayerSpeed;
         } 
     }
 
@@ -32,7 +32,7 @@ public class Mushroom : Obstacle
 
     IEnumerator MushroomTimer()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(10); 
         Destroy(gameObject);
     }
 }
