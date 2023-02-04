@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public void GameStart()
     {
         _gameState = GameState.Gameplay;
+        _player.GetComponent<PlayerCollect>().hasDroplet = false;
         Timer.StartTimer();
         WaterSpawner.SpawnWater();  
         _player.ResetPlayerPosition();
