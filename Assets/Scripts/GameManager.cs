@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject Player;
     public WaterSpawn WaterSpawner;
-    public UIManager UIManager;
     public PowerUpSpawner PowerUpSpawner;
+    public ObstacleSpawner ObstacleSpawner;
+    public UIManager UIManager;
+    public InfoText infoText;
     public Timer Timer;
     public TMP_Text endScoreText;
 
@@ -34,6 +36,7 @@ public class GameManager : MonoBehaviour
         _player.GetComponent<PlayerCollect>().scoreText.text = 0.ToString();
         Debug.Log("game start");
         StartCoroutine(PowerUpTimer());
+        StartCoroutine(ObstacleTimer());
     }
 
     IEnumerator PowerUpTimer()
@@ -43,15 +46,27 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(15, 30));
                 PowerUpSpawner.SpawnPowerup();
+                infoText.NewPowerUp();
+        }
+    }
+
+    IEnumerator ObstacleTimer()
+    {
+        Debug.Log("Started Obstacle Timer");
+        while (Timer._timeRemaining > 0)
+        {
+            ObstacleSpawner.SpawnObstacle();
+            yield return new WaitForSeconds(Random.Range(20, 30));
         }
     }
     
     public void GameEnd()
     {
-        endScoreText.text = ("Score:" + Player.GetComponent<Player>().score.ToString());
+        endScoreText.text = ("Score:" + Player.GetComponent<Player>().score);
         _gameState = GameState.GameOver;
         Timer.StopTimer();
         StopCoroutine(PowerUpTimer());
+        StopCoroutine(ObstacleTimer());
         Debug.Log("game end"); 
     }
     

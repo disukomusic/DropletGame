@@ -7,6 +7,7 @@ using UnityEngine;
 public class ExtraTime : PowerUp
 {
     public Timer _timer;
+    public float extraTime = 20;
 
     void Awake()
     {   
@@ -19,7 +20,7 @@ public class ExtraTime : PowerUp
         {
             Clear();
             PowerUpSpawner.count -= 1;
-            _timer._timeRemaining += 30;
+            _timer._timeRemaining += extraTime;
             Destroy(gameObject);
         } 
     }

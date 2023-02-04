@@ -13,6 +13,9 @@ public class PlayerCollect : MonoBehaviour
     public bool hasDroplet;
     public int score;
     public TMP_Text scoreText;
+    public GameObject infoText;
+
+    private InfoText _infoText;
     
 
     void Start()
@@ -20,6 +23,7 @@ public class PlayerCollect : MonoBehaviour
         hasDroplet = false;
         score = 0;
         scoreText.text = score.ToString();
+        _infoText = infoText.GetComponent<InfoText>();
     }
 
     public void OnTriggerEnter(Collider other)
@@ -29,6 +33,7 @@ public class PlayerCollect : MonoBehaviour
             hasDroplet = true;
             WaterDestroy droplet = other.GetComponent<WaterDestroy>();
             droplet.Collect();
+            _infoText.DepositDroplets();
         }
         else
         if (other.CompareTag("Deposit") && hasDroplet)
@@ -37,7 +42,7 @@ public class PlayerCollect : MonoBehaviour
             hasDroplet = false;
             score += 1;
             scoreText.text = score.ToString();
-            Debug.Log(score);
+            _infoText.CollectDroplets();
         }
     }
 }

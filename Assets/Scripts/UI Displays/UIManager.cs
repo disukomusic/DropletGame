@@ -10,11 +10,15 @@ public class UIManager : MonoBehaviour
     public GameObject endPanel;
     public GameObject hudPanel;
 
-    private void Awake()    
+    public GameObject infoText;
+
+    private void Awake()
     {
         startPanel.SetActive(true);
         endPanel.SetActive(false);
         hudPanel.SetActive(false);
+
+        infoText.SetActive(false);
     }
 
     void Update()
@@ -34,12 +38,15 @@ public class UIManager : MonoBehaviour
         startPanel.SetActive(false);
         endPanel.SetActive(false);
         hudPanel.SetActive(true);
+        infoText.SetActive(true);
     }
-    
+
     private void SetGameOverPanels()
     {
         startPanel.SetActive(false);
         endPanel.SetActive(true);
         hudPanel.SetActive(false);
+        infoText.SetActive(false);
     }
+
 }

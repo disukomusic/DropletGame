@@ -42,7 +42,6 @@ public class PowerUpSpawner : MonoBehaviour
         {
             currentWaypoint.hasPowerup = true;
             _powerup = Instantiate(powerUps[powerRand], waypointPos, Quaternion.Euler(0, 0, 0));
-            Debug.Log("Spawned powerup" + _powerup + "at position" + waypointPos);
             
             _powerup.GetComponent<PowerUp>().waypointID = posRand;
             _powerup.GetComponent<PowerUp>().PowerUpSpawner = this;
@@ -51,8 +50,6 @@ public class PowerUpSpawner : MonoBehaviour
 
         }
 
-        
-  
     }
 
     int GetRandomPosition()

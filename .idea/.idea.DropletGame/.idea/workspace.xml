@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3524ac17-14e1-405a-b61d-b7b98651da12" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DropletGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DropletGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/MAGIMT__ SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/MAGIMT__ SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Pitch.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Pitch.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PowerUps/mushroom.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PowerUps/mushroom.blend.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Droplet.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Droplet.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Droplet/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Droplet/Global Volume Profile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCollect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCollect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/ExtraTime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/ExtraTime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUp.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUpSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUpSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/SpeedUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/SpeedUp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Displays/ScoreUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Displays/ScoreUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Displays/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Displays/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +25,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Obstacles/Mushroom/Mushroom.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Obstacles/ObstacleSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerGroundDetect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerRotate.cs" root0="FORCE_HIGHLIGHTING" />
@@ -24,6 +36,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUpSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUpSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trunk/DepositParticles.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Displays/InfoText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Displays/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Water/WaterDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Water/WaterSpawn.cs" root0="FORCE_HIGHLIGHTING" />
@@ -108,6 +121,7 @@
       <workItem from="1675287614731" duration="1200000" />
       <workItem from="1675443728006" duration="14230000" />
       <workItem from="1675468453559" duration="12163000" />
+      <workItem from="1675531810106" duration="5769000" />
     </task>
     <servers />
   </component>

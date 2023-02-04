@@ -125,7 +125,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DiffuseStep: -0.51
+    - _DiffuseStep: -0.22
     - _DitherTexelSize: 1
     - _DitherThreshold: 1
     - _DstBlend: 0
