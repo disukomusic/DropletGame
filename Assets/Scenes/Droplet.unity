@@ -649,7 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameManager: {fileID: 262618119}
-  timerTime: 5
+  timerTime: 30
   timerIsRunning: 0
   timeText: {fileID: 2118993924}
   _timeRemaining: 10
