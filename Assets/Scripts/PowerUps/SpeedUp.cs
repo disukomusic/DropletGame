@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class SpeedUp : PowerUp
 {
-    public Player _player;
-    public Player movementSpeed;
+    private PlayerMove _playerMove;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -14,8 +13,18 @@ public class SpeedUp : PowerUp
         {
             Clear();
             PowerUpSpawner.count -= 1;
-            movementSpeed + 10;
+            _playerMove = other.GetComponent<PlayerMove>();
+            _playerMove.movementSpeed += 100;
             Destroy(gameObject);
+            StartCoroutine(SpeedUpTimer());
+
         }
     }
+
+    IEnumerator SpeedUpTimer()
+    {
+        yield return new WaitForSeconds(10);
+        _playerMove.movementSpeed = 700;
+    }
+    
 }
