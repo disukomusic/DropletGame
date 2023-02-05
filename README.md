@@ -33,7 +33,7 @@ The objective of Droplet Dash is to guide Steve, the water droplet, through the 
 * Run the “DropletDash.exe” file to play the game
 
 ## Support:
-For support or bug reports, please contact us at https://discord.gg/FACwnVgh. We are  working to improve the game and appreciate any feedback or suggestions you may have.
+For support or bug reports, please contact us at https://discord.gg/FACwnVgh or via the Issues tab. We are working to improve the game and appreciate any feedback or suggestions you may have.
 
 ## Enjoy Droplet Dash!
 We hope you enjoy playing Droplet Dash and thank you for choosing our game! Help Steve collect water and save the tree in this exciting and challenging arcade game.
