@@ -46,8 +46,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Started Powerup Timer");
         while (Timer._timeRemaining > 0)
         {
-            yield return new WaitForSeconds(Random.Range(1, 5));
             PowerUpSpawner.SpawnPowerup();
+            yield return new WaitForSeconds(Random.Range(15, 20));
+            //PowerUpSpawner.SpawnPowerup();
             infoText.NewPowerUp();
         }
     }
@@ -58,7 +59,7 @@ public class GameManager : MonoBehaviour
         while (Timer._timeRemaining > 0)
         {
             ObstacleSpawner.SpawnObstacle();
-            yield return new WaitForSeconds(Random.Range(1, 5));
+            yield return new WaitForSeconds(Random.Range(10, 15));
         }
     }
     

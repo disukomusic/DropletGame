@@ -14,13 +14,17 @@ public class PlayerCollect : MonoBehaviour
     public int score;
     public TMP_Text scoreText;
     public GameObject infoText;
-
+    public AudioSource audioSource;
+    public AudioClip dropletPickupSound;
+    public AudioClip dropletDepositSound;
+    
     private InfoText _infoText;
     
 
     void Start()
     {
         hasDroplet = false;
+        
         score = 0;
         scoreText.text = score.ToString();
         _infoText = infoText.GetComponent<InfoText>();
@@ -31,6 +35,10 @@ public class PlayerCollect : MonoBehaviour
         if (other.CompareTag("Droplet") )
         {
             hasDroplet = true;
+            
+            audioSource.clip = dropletPickupSound;
+            audioSource.Play();
+            
             WaterDestroy droplet = other.GetComponent<WaterDestroy>();
             droplet.Collect();
             _infoText.DepositDroplets();
@@ -38,8 +46,13 @@ public class PlayerCollect : MonoBehaviour
         else
         if (other.CompareTag("Deposit") && hasDroplet)
         {
-            GameManager.WaterSpawner.SpawnWater();
             hasDroplet = false;
+            
+            audioSource.clip = dropletDepositSound;
+            audioSource.Play();
+            
+            GameManager.WaterSpawner.SpawnWater();
+            
             score += 1;
             scoreText.text = score.ToString();
             _infoText.CollectDroplets();

@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7149355514647713029}
   - component: {fileID: 8427934026184788355}
   - component: {fileID: 8427934026184788356}
+  - component: {fileID: 7902889230362683459}
   m_Layer: 0
   m_Name: Special Root
-  m_TagString: Untagged
+  m_TagString: RootPowerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8662498537333929168}
-  m_LocalRotation: {x: -0.51277983, y: 0.48688492, z: -0.48688492, w: 0.5127798}
+  m_LocalRotation: {x: -0.64563006, y: 0.2883782, z: -0.2883785, w: 0.64562976}
   m_LocalPosition: {x: 740.1788, y: 0, z: -0.5632858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -2.968, y: 90, z: -90}
+  m_LocalEulerAnglesHint: {x: -41.863, y: 90, z: -90}
 --- !u!33 &4959426086063464911
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -93,7 +94,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8662498537333929168}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2.5586512
@@ -112,3 +113,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypointID: 0
   PowerUpSpawner: {fileID: 0}
+  emitParticles: 0
+--- !u!114 &7902889230362683459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8662498537333929168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d770cdfd0a81e40be3cec2bc658bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1

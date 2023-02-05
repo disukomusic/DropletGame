@@ -39,6 +39,10 @@ public class Timer : MonoBehaviour
                 {
                     RedText();
                 }
+                else
+                {
+                    WhiteText();
+                }
             }
             else
             {
@@ -69,6 +73,7 @@ public class Timer : MonoBehaviour
     }
     public void StartTimer()
     {
+        WhiteText();
         _timeRemaining = timerTime;
         timerIsRunning = true;
     }

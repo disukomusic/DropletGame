@@ -9,6 +9,8 @@ TagManager:
   - Droplet
   - ClockPowerup
   - Mushroom
+  - RootPowerup
+  - MagnetPowerup
   layers:
   - Default
   - TransparentFX

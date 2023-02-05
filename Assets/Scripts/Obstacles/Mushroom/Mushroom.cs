@@ -42,6 +42,7 @@ public class Mushroom : Obstacle
             _playerMove.movementSpeed = 700f;
         }
 
+        Clear();
         ObstacleSpawner.count--;
         Destroy(gameObject);
     }

@@ -20,15 +20,17 @@ public class SpeedUp : PowerUp
             _playerMove.movementSpeed += 200;
             StartCoroutine(SpeedUpTimer());
             //im gonna warn you this next line is really REALLY stupid
-            gameObject.transform.position += new Vector3(1000, 100, 100);
+            gameObject.transform.position = new Vector3(100, 100, 100);
+            
+            
         }
     }
 
     IEnumerator SpeedUpTimer()
     {
         yield return new WaitForSeconds(5);
-        Destroy(gameObject);
         _playerMove.movementSpeed = 700;
+        Destroy(gameObject);
     }
-    
+
 }

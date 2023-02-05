@@ -6565,7 +6565,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -7416,8 +7416,10 @@ GameObject:
   - component: {fileID: 1608731396}
   - component: {fileID: 1608731397}
   - component: {fileID: 1608731399}
+  - component: {fileID: 1608731403}
   - component: {fileID: 1608731401}
   - component: {fileID: 1608731400}
+  - component: {fileID: 1608731402}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -7530,6 +7532,9 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 1327555043}
   infoText: {fileID: 309592060}
+  audioSource: {fileID: 1608731402}
+  dropletPickupSound: {fileID: 8300000, guid: f6c933e66c0808f44b355d8a4d6fdd27, type: 3}
+  dropletDepositSound: {fileID: 8300000, guid: e79d51d24d21f7943ad98e7efeaa0cde, type: 3}
 --- !u!114 &1608731397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12348,6 +12353,115 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!82 &1608731402
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608731386}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f6c933e66c0808f44b355d8a4d6fdd27, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.523
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1608731403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608731386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d551b33d103413d4f906fc5451d6f41e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpSound: {fileID: 8300000, guid: 7a024d13d912cfc40a0cb4be983ec02a, type: 3}
 --- !u!1001 &1676393144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12547,8 +12661,7 @@ MonoBehaviour:
   - waypoint: {fileID: 159931831}
     hasPowerup: 0
   powerUps:
-  - {fileID: 4252549498422108939, guid: be3a3c95e8ce74145bbd7ac6dbfe125d, type: 3}
-  - {fileID: 8662498537333929168, guid: 5a08f291cafd54c488b430fdc21d1cb6, type: 3}
+  - {fileID: 7663122452811614657, guid: bf50c6aebc18abd44b4f44088df68434, type: 3}
   Player: {fileID: 1608731398}
 --- !u!1 &1818126526
 GameObject:
@@ -13138,8 +13251,9 @@ MonoBehaviour:
   - waypoint: {fileID: 975054130}
     hasObstacle: 0
   obstacles:
+  - {fileID: 1187758080201644933, guid: 1899b82ac9f13c0409d54f070b81c1ee, type: 3}
   - {fileID: 2883220880872875593, guid: 1ee8a5ebda6ccb04881a1debf1406998, type: 3}
-  Player: {fileID: 1608731398}
+  player: {fileID: 0}
 --- !u!1 &2118993921
 GameObject:
   m_ObjectHideFlags: 0

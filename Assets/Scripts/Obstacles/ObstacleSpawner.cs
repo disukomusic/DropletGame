@@ -38,7 +38,7 @@ public class ObstacleSpawner : MonoBehaviour
         if (count < 2 && !currentWaypoint.hasObstacle)
         {
             currentWaypoint.hasObstacle = true;
-            _obstacle = Instantiate(obstacles[obstacleRand], waypointPos, Quaternion.Euler(0, 0, 0));
+            _obstacle = Instantiate(obstacles[obstacleRand], waypointPos, Quaternion.Euler(0, 90, 0));
 
             _obstacle.GetComponent<Obstacle>().waypointID = posRand;
             _obstacle.GetComponent<Obstacle>().ObstacleSpawner = this;
