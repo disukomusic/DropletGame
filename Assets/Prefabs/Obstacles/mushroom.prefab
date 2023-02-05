@@ -867,7 +867,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5240,7 +5240,7 @@ GameObject:
   - component: {fileID: 2648727688594299670}
   m_Layer: 0
   m_Name: mushroom
-  m_TagString: Untagged
+  m_TagString: Mushroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5283,6 +5283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e501b0366c35e42bbefefff78fa619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypointID: 0
+  ObstacleSpawner: {fileID: 0}
 --- !u!135 &2648727688594299670
 SphereCollider:
   m_ObjectHideFlags: 0

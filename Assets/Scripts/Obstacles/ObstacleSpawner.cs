@@ -16,9 +16,6 @@ public class ObstacleSpawner : MonoBehaviour
 
     public void SpawnObstacle()
     {
-
-        Debug.Log(count);
-
         //get a random index for the waypoints list, as well as a random index for the powerups list
         int posRand = GetRandomPosition();
         int obstacleRand = GetRandomObstacle();

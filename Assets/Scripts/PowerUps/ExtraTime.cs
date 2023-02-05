@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//The new ExtraTime class inherents from the PowerUp category and has access to everything from it
+//The new ExtraTime class inherits from the PowerUp category and has access to everything from it
 public class ExtraTime : PowerUp
 {
     public Timer _timer;

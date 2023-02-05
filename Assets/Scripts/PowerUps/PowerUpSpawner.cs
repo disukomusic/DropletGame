@@ -17,9 +17,6 @@ public class PowerUpSpawner : MonoBehaviour
 
     public void SpawnPowerup()
     {
-        
-        Debug.Log(count);
-
         //get a random index for the waypoints list, as well as a random index for the powerups list
         int posRand = GetRandomPosition();
         int powerRand = GetRandomPowerup();
@@ -37,7 +34,7 @@ public class PowerUpSpawner : MonoBehaviour
         PowerUpSpawn currentWaypoint = waypoints[posRand];
         Vector3 waypointPos = currentWaypoint.waypoint.position;
         
-        //instantiate a powerup at the position of the waypoint (and rotate so its upright, stupid blender)
+        //instantiate a powerup at the position of the waypoint, only if theres 
         if (count < 3 && !currentWaypoint.hasPowerup)
         {
             currentWaypoint.hasPowerup = true;
@@ -47,9 +44,7 @@ public class PowerUpSpawner : MonoBehaviour
             _powerup.GetComponent<PowerUp>().PowerUpSpawner = this;
             
             count += 1;
-
         }
-
     }
 
     int GetRandomPosition()
