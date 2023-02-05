@@ -8,7 +8,7 @@ public class ObstacleSpawner : MonoBehaviour
     public GameManager gameManager;
     public ObstacleSpawn[] waypoints;
     public GameObject[] obstacles;
-    public Player Player;
+    public Player player;
     
     private int _lastPosRand = 0;
     private int _lastObstacleRand = 0;
@@ -43,7 +43,9 @@ public class ObstacleSpawner : MonoBehaviour
             _obstacle.GetComponent<Obstacle>().waypointID = posRand;
             _obstacle.GetComponent<Obstacle>().ObstacleSpawner = this;
             
-            count += 1;
+            count ++;
+            Debug.Log("There are currently" + count + "obstacles");
+
         }
     }
     

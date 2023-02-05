@@ -10,7 +10,6 @@ public class PlayerMushroomParticles : MonoBehaviour
     private void Start()
     {
         particleSystem.enableEmission = false;
-
     }
 
     private void OnTriggerEnter(Collider other)
