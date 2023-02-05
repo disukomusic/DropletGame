@@ -6,12 +6,12 @@ using UnityEngine;
 //The new ExtraTime class inherits from the PowerUp category and has access to everything from it
 public class ExtraTime : PowerUp
 {
-    public Timer _timer;
+    public Timer timer;
     public float extraTime = 20;
 
     void Awake()
     {   
-        _timer = Timer.instance;
+        timer = Timer.instance;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,7 +20,7 @@ public class ExtraTime : PowerUp
         {
             Clear();
             PowerUpSpawner.count -= 1;
-            _timer._timeRemaining += extraTime;
+            timer._timeRemaining += extraTime;
             Destroy(gameObject);
         } 
     }

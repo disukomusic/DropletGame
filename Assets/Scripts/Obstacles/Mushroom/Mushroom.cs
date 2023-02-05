@@ -6,16 +6,16 @@ using UnityEngine;
 public class Mushroom : Obstacle
 {
     private float _previousPlayerSpeed;
-    private PlayerMove _player;
+    private ParticleSystem _playerParticles;
+    private PlayerMove _playerMove;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("player entered mushroom zone");
-            
-            _player = other.GetComponent<PlayerMove>();
-            _previousPlayerSpeed = _player.movementSpeed;
-            _player.movementSpeed = 200;
+            _playerParticles = other.GetComponent<ParticleSystem>();
+            _playerMove = other.GetComponent<PlayerMove>();
+            _previousPlayerSpeed = _playerMove.movementSpeed;
+            _playerMove.movementSpeed = 200;
         } 
     }
     
@@ -23,7 +23,6 @@ public class Mushroom : Obstacle
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("player exited mushroom zone");
             Debug.Log(_previousPlayerSpeed);
             other.GetComponent<PlayerMove>().movementSpeed = 700;
         } 
@@ -37,10 +36,13 @@ public class Mushroom : Obstacle
     IEnumerator MushroomTimer()
     {
         yield return new WaitForSeconds(10);
-        if (_player) 
+        if (_playerMove) 
         {
-            _player.movementSpeed = 700f;
+            _playerParticles.enableEmission = false;
+            _playerMove.movementSpeed = 700f;
         }
+
+        ObstacleSpawner.count--;
         Destroy(gameObject);
     }
 }

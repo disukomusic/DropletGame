@@ -44,6 +44,7 @@ public class PowerUpSpawner : MonoBehaviour
             _powerup.GetComponent<PowerUp>().PowerUpSpawner = this;
             
             count += 1;
+
         }
     }
 
