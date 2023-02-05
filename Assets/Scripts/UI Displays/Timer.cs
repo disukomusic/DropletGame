@@ -24,6 +24,7 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
+        WhiteText();
         timerIsRunning = false;
     }
     void Update()
@@ -34,6 +35,10 @@ public class Timer : MonoBehaviour
             {
                 _timeRemaining -= Time.deltaTime;
                 DisplayTime(_timeRemaining);
+                if (_timeRemaining < 15)
+                {
+                    RedText();
+                }
             }
             else
             {
@@ -44,6 +49,7 @@ public class Timer : MonoBehaviour
             }
         }
     }
+    
     void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
@@ -52,6 +58,15 @@ public class Timer : MonoBehaviour
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
+    void RedText()
+    {
+        timeText.color = Color.red;
+    }
+
+    void WhiteText()
+    {
+        timeText.color = Color.white;
+    }
     public void StartTimer()
     {
         _timeRemaining = timerTime;
