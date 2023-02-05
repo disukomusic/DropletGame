@@ -12,7 +12,7 @@ public class PowerUpSpawner : MonoBehaviour
     
     private int _lastPosRand = 0;
     private int _lastLastPosRand = 0;
-    private int _lastPowerRand = 0;
+    private int _powerRand = 0;
     private GameObject _powerup;
 
     public void SpawnPowerup()
@@ -26,10 +26,10 @@ public class PowerUpSpawner : MonoBehaviour
         {
             posRand = GetRandomPosition();
         }
+        
         //store the index of the current waypoint as the last selected one
         _lastPosRand = posRand;
-        _lastPowerRand = powerRand;
-        
+
         //set the current waypoint to the random index and then set the position of it
         PowerUpSpawn currentWaypoint = waypoints[posRand];
         Vector3 waypointPos = currentWaypoint.waypoint.position;

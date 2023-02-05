@@ -7,7 +7,7 @@ using UnityEngine;
 public class ExtraTime : PowerUp
 {
     public Timer timer;
-    public float extraTime = 20;
+    public float extraTime = 30;
 
     void Awake()
     {   

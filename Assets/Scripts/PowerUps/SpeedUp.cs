@@ -21,8 +21,6 @@ public class SpeedUp : PowerUp
             StartCoroutine(SpeedUpTimer());
             //im gonna warn you this next line is really REALLY stupid
             gameObject.transform.position = new Vector3(100, 100, 100);
-            
-            
         }
     }
 
